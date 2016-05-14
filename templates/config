@@ -1,0 +1,9 @@
+{% for profile in item.profiles %}
+[{{ profile.name }}]
+{% for key, value in profile.iteritems() %}
+{% if key != 'name' %}
+{{ key }}={{ value }}
+{% endif %}
+{% endfor %}
+
+{% endfor %}

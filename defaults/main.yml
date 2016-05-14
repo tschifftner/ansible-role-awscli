@@ -1,0 +1,9 @@
+---
+
+#awscli_profiles:
+#  - user: jenkins
+#    profiles:
+#      - name: testing
+#        aws_access_key_id: '<testing access key>'
+#        aws_secret_access_key: '<testing secret key>'
+awscli_profiles: []

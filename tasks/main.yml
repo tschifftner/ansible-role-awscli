@@ -1,0 +1,6 @@
+---
+- include: install.yml
+  tags: ['awscli-install']
+
+- include: configure.yml
+  tags: ['awscli-configure']

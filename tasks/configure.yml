@@ -1,0 +1,21 @@
+
+#- set_fact:
+#    _awscli_profiles[{{item.user}}][]: '{{ '
+
+- name: Ensure aws config dir exists
+  file:
+    path: ~/.aws
+    state: directory
+    owner: '{{ item.user }}'
+  become_user: '{{ item.user }}'
+  when: item.profiles is defined
+  with_items: '{{ awscli_profiles }}'
+
+- name: Set config
+  template:
+    src: config
+    dest: ~/.aws/config
+    owner: '{{ item.user }}'
+  become_user: '{{ item.user }}'
+  when: item.profiles is defined
+  with_items: '{{ awscli_profiles }}'
