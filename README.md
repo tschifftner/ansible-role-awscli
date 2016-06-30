@@ -6,7 +6,7 @@ Installs awscli from source on Debian/Ubuntu linux servers.
 
 ## Requirements
 
-ansible 1.9+
+ansible 2.0+
 
 ## Role Variables
 
@@ -49,8 +49,8 @@ $ ansible-galaxy install tschifftner.awscli
 ## Supported OS
 Ansible          | Debian Jessie    | Ubuntu 14.04
 :--------------: | :--------------: | :-------------:
-1.9              | Yes              | Yes
 2.0              | Yes              | Yes
+2.1              | Yes              | Yes
 
 ## License
 
