@@ -12,6 +12,7 @@
   with_items: '{{ awscli_profiles }}'
 
 - name: Set config
+  no_log: true
   template:
     src: config
     dest: ~/.aws/config
