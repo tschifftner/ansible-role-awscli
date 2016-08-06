@@ -15,7 +15,7 @@
   no_log: true
   template:
     src: config
-    dest: ~/.aws/config
+    dest: ~/.aws/credentials
     owner: '{{ item.user }}'
   become_user: '{{ item.user }}'
   when: item.profiles is defined
