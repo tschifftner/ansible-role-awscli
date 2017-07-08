@@ -6,4 +6,9 @@
 #      - name: testing
 #        aws_access_key_id: '<testing access key>'
 #        aws_secret_access_key: '<testing secret key>'
-awscli_profiles: []
+
+awscli_default_profiles: []
+awscli_group_profiles: []
+awscli_host_profiles: []
+
+awscli_profiles: '{{ awscli_default_profiles + awscli_group_profiles + awscli_host_profiles }}'
