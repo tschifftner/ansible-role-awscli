@@ -3,6 +3,7 @@
 #    _awscli_profiles[{{item.user}}][]: '{{ '
 
 - name: Ensure aws config dir exists
+  no_log: true
   file:
     path: ~/.aws
     state: directory
