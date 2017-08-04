@@ -8,6 +8,7 @@
     path: ~/.aws
     state: directory
     owner: '{{ item.user }}'
+  become: true
   become_user: '{{ item.user }}'
   when: item.profiles is defined
   with_items: '{{ awscli_profiles }}'
@@ -18,6 +19,7 @@
     src: config
     dest: ~/.aws/credentials
     owner: '{{ item.user }}'
+  become: true
   become_user: '{{ item.user }}'
   when: item.profiles is defined
   with_items: '{{ awscli_profiles }}'
