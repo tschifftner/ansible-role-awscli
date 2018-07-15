@@ -12,3 +12,7 @@ awscli_group_profiles: []
 awscli_host_profiles: []
 
 awscli_profiles: '{{ awscli_default_profiles + awscli_group_profiles + awscli_host_profiles }}'
+
+awscli_apt_packages:
+  - python-pip
+  - bash-completion

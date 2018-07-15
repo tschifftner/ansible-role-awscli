@@ -11,4 +11,4 @@
             aws_secret_access_key: '<testing secret key>'
 
   roles:
-    - ansible-role-awscli
+    - role_under_test

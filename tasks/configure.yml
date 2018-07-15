@@ -23,3 +23,12 @@
   become_user: '{{ item.user }}'
   when: item.profiles is defined
   with_items: '{{ awscli_profiles }}'
+
+- name: Enable autocomplete
+  command: complete -C 'aws_completer' aws
+  ignore_errors: true
+  changed_when: false
+  become: true
+  become_user: '{{ item.user }}'
+  when: item.profiles is defined
+  with_items: '{{ awscli_profiles }}'

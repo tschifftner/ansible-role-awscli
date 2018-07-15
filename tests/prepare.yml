@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  pre_tasks:
+    - name: Create user travis
+      user:
+        name: travis
+        shell: /bin/bash
