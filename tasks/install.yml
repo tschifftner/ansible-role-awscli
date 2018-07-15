@@ -1,16 +1,12 @@
 ---
 
-- name: Install pip
+- name: Install required apt packages
   apt:
-    pkg: python-pip
+    pkg: '{{ item }}'
     state: present
+  with_items: '{{ awscli_apt_packages }}'
 
 - name: Install awscli
   pip:
     name: awscli
     state: present
-
-- name: Enable autocomplete
-  command: complete -C aws_completer aws
-  ignore_errors: true
-  changed_when: false
