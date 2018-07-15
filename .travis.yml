@@ -33,9 +33,13 @@ script:
     && (echo 'awscli is installed' && exit 0)
     || (echo 'awscli is not installed' && exit 1)
 
+  # Check autocomplete is installed (this does not work in docker container somehow)
+  # - ${DOCKER} complete -p | grep aws_completer
+
 after_failure:
   - ${DOCKER} aws --version
   - ${DOCKER} which aws
+  - ${DOCKER} complete -p
 
 notifications:
   slack: ambimax:2MlPTX9bY9aPxCPhJGxHKIT6
