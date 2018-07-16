@@ -1,6 +1,6 @@
 # Ansible Role: Install awscli
 
-[![Build Status](https://travis-ci.org/tschifftner/ansible-role-awscli.svg)](https://travis-ci.org/tschifftner/ansible-role-awscli)
+[![Build Status](https://travis-ci.org/tschifftner/ansible-role-awscli.svg?branch=master)](https://travis-ci.org/tschifftner/ansible-role-awscli)
 
 Installs awscli from source on Debian/Ubuntu linux servers.
 
