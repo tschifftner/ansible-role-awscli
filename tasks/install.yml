@@ -11,3 +11,4 @@
   pip:
     name: awscli
     state: present
+  with_items: '{{ awscli_pip_packages }}'
