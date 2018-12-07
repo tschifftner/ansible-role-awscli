@@ -16,6 +16,7 @@ awscli_profiles: '{{ awscli_default_profiles + awscli_group_profiles + awscli_ho
 awscli_apt_packages:
   - python-pip
   - bash-completion
+  - python3-pysocks
 
 awscli_pip_packages:
   - pysocks
