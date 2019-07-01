@@ -6,6 +6,9 @@
     state: present
     cache_valid_time: 86400
 
+- name: Include debian 8 specific installation file
+  include: dist/debian8.yml
+
 - name: Install awscli
   pip:
     name: awscli
