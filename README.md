@@ -48,6 +48,7 @@ $ ansible-galaxy install tschifftner.awscli
 
 ## Supported OS
 
+ - Debian 10 (Buster)
  - Debian 9 (Stretch)
  - Debian 8 (Jessie)
  - Ubuntu 18.04 (Bionic Beaver)
