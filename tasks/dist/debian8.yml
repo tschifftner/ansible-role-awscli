@@ -1,0 +1,6 @@
+---
+
+- name: Install python-dev
+  apt:
+    pkg: python-dev
+    state: present

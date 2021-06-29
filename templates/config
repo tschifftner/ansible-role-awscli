@@ -1,6 +1,6 @@
 {% for profile in item.profiles %}
 [{{ profile.name }}]
-{% for key, value in profile.iteritems() %}
+{% for key, value in profile.items() %}
 {% if key != 'name' %}
 {{ key }}={{ value }}
 {% endif %}
